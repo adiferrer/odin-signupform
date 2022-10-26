@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    display: flex;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#cover {
+    /* responsive background image */
+    position: relative;
+    background-image: url("images/dance.jpeg");
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+
+/* for desktop */
+@media only screen and (min-width: 700px) {
+/* Left Side Layout + Design */
+
+    #cover {
+        width: 30%;
+        background-size: cover;
+
+        display: inherit;
+        flex-direction: column;
+    }
+
+    .logo {
+        background-color: rgba(60, 49, 49, 0.354);
+        position: relative;
+        top: 152px;
+
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo > img {
+        width: 100px;
+        height: auto;
+    }
+
+    .logo + div {
+        height: 100px;
+        position: relative;
+        bottom: -680px;
+
+        display: inherit;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    /* Right Side Layout */
+    #right-side {
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sign-up-form > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        flex: 1 1 100%;
+    }
+
+    #sign-up-form > div > div {
+        flex: 1 1 50%;
+    }
+
+    #right-side > p,
+    button[type="submit"],
+    #sign-up-form > div {
+        margin-left: 20px;
+    } 
+}
+
+label, input {
+    display: block;
+    position: relative; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#sign-up-form > div > div {
+    margin-bottom: 10px;
+}
