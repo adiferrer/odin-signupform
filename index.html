@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Left Side -->
+    <!-- Left/Top Side -->
     <div id="cover">
        <div class="logo">
         <img src="images/odin-lined.png" alt="Odin Logo">
@@ -16,44 +16,48 @@
        </div>
        <div>
         <p>
-            Photo by <a href="https://unsplash.com/@hudsonhintze">Hudson Hintze</a> on <a href="https://unsplash.com/photos/4ydjTMLKdR4">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@hudsonhintze" target="_blank">Hudson Hintze</a> on <a href="https://unsplash.com/photos/4ydjTMLKdR4" target="_blank">Unsplash</a>
         </p>
        </div>
     </div>
 
-    <!-- Right Side -->
-    <div id="right-side">
-        <p>
-            This is not a real online service! You know you need something like this in your life 
-            to help you realize your deepest dreams. Sign up <em>now</em> to get started.
-        </p>
-        <p>You <em>know</em> you want to.</p>
+    <!-- Right/Bottom Side -->
+    <div id="form">
+        <div>
+            <h3>
+                This is not a real online service! You know you need something like this in your life 
+                to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+            </h3>
+            <h3>You <em>know</em> you want to.</h3>
+        </div>
         <form action="" id="sign-up-form">
             <div>
-                <h1>Let's do this!</h1>
+                <h3>Let's do this!</h3>
                 <div>
-                    <label for="user-first-name">First Name</label>
-                    <input type="text" name="user-first-name" id="user-first-name"/>
-                </div>
-                <div>
-                    <label for="user-last-name">Last Name</label>
-                    <input type="text" name="user-last-name" id="user-last-name"/>
-                </div>
-                <div>
-                    <label for="user-email">Email</label>
-                    <input type="email" name="user-email" id="user-email">
-                </div>
-                <div>
-                    <label for="user-phone">Phone Number</label>
-                    <input type="tel" name="user-phone" id="user-phone">
-                </div>
-                <div>
-                    <label for="user-pass">Password</label>
-                    <input type="password" name="user-pass" id="user-pass">
-                </div>
-                <div>
-                    <label for="confirm-pass">Confirm Password</label>
-                    <input type="password" name="confirm-pass" id="confirm-pass">
+                    <div>
+                        <label for="user-first-name">First Name</label>
+                        <input type="text" name="user-first-name" id="user-first-name" placeholder="ex. Thor in Thor Odinson" required/>
+                    </div>
+                    <div>
+                        <label for="user-last-name">Last Name</label>
+                        <input type="text" name="user-last-name" id="user-last-name" placeholder="ex. Odinson in Thor Odinson"  required/>
+                    </div>
+                    <div>
+                        <label for="user-email">Email</label>
+                        <input type="email" name="user-email" id="user-email" placeholder="ex. example@example.com" required>
+                    </div>
+                    <div>
+                        <label for="user-phone">Phone Number</label>
+                        <input type="tel" name="user-phone" id="user-phone" placeholder="ex. +1 *** *** ****" required>
+                    </div>
+                    <div>
+                        <label for="user-pass">Password</label>
+                        <input type="password" name="user-pass" id="user-pass" class="error" required>
+                    </div>
+                    <div>
+                        <label for="confirm-pass">Confirm Password</label>
+                        <input type="password" name="confirm-pass" id="confirm-pass" class="error" required>
+                    </div>
                 </div>
             </div>  
             <button type="submit">Create Account</button>

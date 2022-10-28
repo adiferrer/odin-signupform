@@ -1,29 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: "Norse";
+    src: url("webfontkit-20221027-122453/norse-bold-webfont.woff") format("woff"), url("webfontkit-20221027-122453/norse-bold-webfont.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
 
 body {
     width: 100vw;
     height: 100vh;
-    margin: 0;
-    position: absolute;
+    position: relative;
     display: flex;
-
-    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
 }
 
 #cover {
     /* responsive background image */
-    position: relative;
+    position: inherit;
     background-image: url("images/dance.jpeg");
     background-repeat: no-repeat;   
     background-position: center;
 }
 
+#form {
+    background-color:rgb(236, 236, 236);
+}
+
+#sign-up-form > div {
+    background-color: white;
+}
+
 /* for desktop */
 @media only screen and (min-width: 700px) {
-/* Left Side Layout + Design */
+    body {
+        flex-direction: row;
+    }
 
+    /* Left Side Layout + Design */
     #cover {
-        width: 30%;
+        width: 35%;
         background-size: cover;
 
         display: inherit;
@@ -33,7 +56,7 @@ body {
     .logo {
         background-color: rgba(60, 49, 49, 0.354);
         position: relative;
-        top: 152px;
+        top: 190px;
 
         display: inherit;
         justify-content: center;
@@ -41,14 +64,14 @@ body {
     }
 
     .logo > img {
-        width: 100px;
+        width: 90px;
         height: auto;
     }
 
     .logo + div {
         height: 100px;
         position: relative;
-        bottom: -680px;
+        bottom: -660px;
 
         display: inherit;
         justify-content: center;
@@ -56,39 +79,150 @@ body {
     }
 
     /* Right Side Layout */
-    #right-side {
+    #form {
+        width: 65%;
         display: inherit;
         flex-direction: column;
         justify-content: center;
     }
 
+    h3,
+    #sign-up-form > div > h3 + div,
+    button[type="submit"], 
+    #form > p {
+        margin-left: 50px;
+    }
+
+    #form > div > h3:first-child {
+        width: 64%;
+    } 
+
+    #sign-up-form {
+        display: inherit;
+        flex-direction: inherit;
+        gap: 10px;
+    }
+
     #sign-up-form > div {
-        display: flex;
+        display: inherit;
+        flex-direction: inherit;
+    }
+
+    #sign-up-form > div > h3 + div {
+        display: inherit;
         flex-wrap: wrap;
     }
 
-    h1 {
-        flex: 1 1 100%;
+    #sign-up-form > div > div > div {
+        flex: 1 1 35%;
     }
+}
 
-    #sign-up-form > div > div {
-        flex: 1 1 50%;
-    }
+#form > div > h3:first-child {
+    margin-bottom: 30px;
+}
 
-    #right-side > p,
-    button[type="submit"],
-    #sign-up-form > div {
-        margin-left: 20px;
-    } 
+#form > div {
+    margin-bottom: 60px;
 }
 
 label, input {
-    display: block;
     position: relative; 
-    margin: 0;
     box-sizing: border-box;
+
+    display: block;
 }
 
-#sign-up-form > div > div {
-    margin-bottom: 10px;
+label {
+    padding-top: 10px;
+}
+
+#sign-up-form > div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo > div {
+    font-family: "Norse";
+    font-size: 5em;
+}
+
+#cover,
+a:not(#log-in),
+a:not(#log-in):active,
+a:not(#log-in):visited {
+    color: white;
+}
+
+a:not(#log-in):hover {
+    color: #E5E7EB;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+input,
+button[type="submit"]  {
+    appearance: none;
+}
+
+input {
+    font-size: 0.9em;
+    height: 2.5em;
+    width: 254px; 
+    padding: 0px 3px 0px 3px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(21, 113, 224);
+    box-shadow: 1px 1px 3px gray;
+}
+
+button[type="submit"] {
+    height: 3em;
+    width: 13em;
+
+    color: white;
+    background-color: #3187C4;
+    font-size: medium;
+    font-weight: 500;
+    
+    border-radius: 5px;
+    border-style: none;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0px 0px 6px gray;
+}
+
+#sign-up-form + p, 
+button[type="submit"] {
+    margin-top: 30px;
+}
+
+#log-in {
+    padding-bottom: 10px;
+}
+
+#log-in,
+#log-in:active,
+#log-in:visited {
+    color: #3187C4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#log-in:hover {
+    text-decoration: underline;
 }
