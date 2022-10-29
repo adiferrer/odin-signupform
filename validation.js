@@ -1,7 +1,7 @@
 const passwordError = document.getElementById('password-error');
 const submitButton = document.getElementById('submit');
 const passwords = Array.from(document.getElementsByClassName('error'));
-const inputs = 
+// const inputs = 
 
 submitButton.addEventListener('click', () => {
 
