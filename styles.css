@@ -8,10 +8,6 @@
     font-style: normal;
 }
 
-:root {
-    --password-border: crimson;
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -193,10 +189,6 @@ input {
     padding: 0px 3px 0px 3px;
     border: 1px solid #E5E7EB;
     border-radius: 5px;
-}
-
-input[type='password'] {
-    border-color: var(--password-border);
 }
 
 input:focus {
