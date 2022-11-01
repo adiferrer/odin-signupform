@@ -1,9 +1,10 @@
 const passwordError = document.getElementById('password-error');
 const submitButton = document.getElementById('submit');
 const passwords = Array.from(document.getElementsByClassName('error'));
-// const inputs = 
+const inputs = Array.from(document.getElementsByTagName('input'));
 
 submitButton.addEventListener('click', () => {
+    // name validation
 
     // password validation
     if(passwords[0].value != passwords[1].value) {

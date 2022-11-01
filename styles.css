@@ -182,7 +182,8 @@ button[type="submit"]  {
     appearance: none;
 }
 
-input {
+input,
+input:valid {
     font-size: 0.9em;
     height: 2.5em;
     width: 254px; 
@@ -195,6 +196,14 @@ input:focus {
     outline: none;
     border: 1px solid rgb(21, 113, 224);
     box-shadow: 1px 1px 3px gray;
+}
+
+/* input:valid {
+    border: 1px solid green;
+} */
+
+input:invalid {
+    border: 1px solid crimson;
 }
 
 button[type="submit"] {

@@ -2,5 +2,6 @@
 - Intermediate HTML and CSS Course: Project 1
 
 ## To-Do
-1. Mobile design
-2. Fix Desktop responsive
+1. Input validation
+2. Mobile design
+3. Fix Desktop responsive
